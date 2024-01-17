@@ -1,0 +1,106 @@
+@import "../../colors.scss";
+
+main {
+
+    height: calc(100vh - 72.25px);
+    border-left: .5px solid $blue-gray;
+
+
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .main-message-container {
+        height: calc(100vh - 72.25px);
+        border: 2px solid red;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        gap: 1.5rem;
+        position: relative;
+        padding-bottom: 1.5rem;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+
+    .message-container {
+        max-width: 90%;
+        display: inline-block;
+
+        .time {
+            color: $white-light;
+            font-weight: 500;
+            font-size: .8rem;
+        }
+
+        .message {
+            margin-top: 10px;
+            background-color: $side-bar;
+            border-radius: 10px;
+            padding: 1rem;
+            color: $gray;
+            font-weight: 400;
+        }
+
+    }
+
+    .qustion {
+        align-self: flex-end;
+    }
+
+    .answer {
+        align-self: flex-start;
+    }
+
+    .input-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 10px;
+        background-color: $dark-gray;
+
+        .input {
+            border: 1px solid $white;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            gap: 1rem;
+
+            svg {
+                font-size: 1.2rem;
+                pointer-events: none;
+            }
+
+            .links {
+                transform: rotate(90deg);
+            }
+
+            .send {
+                color: $green;
+                pointer-events: all;
+                cursor: pointer;
+            }
+
+            input {
+                color: $white;
+                font-size: 1rem;
+                font-weight: 400;
+                flex: 1;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-weight: 250;
+
+            }
+
+        }
+    }
+}

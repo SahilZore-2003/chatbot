@@ -1,0 +1,109 @@
+@import "../../colors.scss";
+
+nav {
+    background: $blue-gray;
+    padding: .8rem 5%;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .top {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .search-box {
+                display: flex;
+                align-items: center;
+                background-color: $dark-gray;
+                padding: 10px 15px;
+                border-radius: 30px;
+                width: 300px;
+                border: 1.5px solid $white-light;
+
+                .search-icon {
+                    color: $white-light;
+                    font-size: 1.5rem;
+                }
+
+                input {
+                    flex: 1;
+                    color: $white;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 1rem;
+
+                    &:focus {
+                        border: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+
+        .user {
+
+            // .notification{
+            //     position: relative;
+
+            //     &::before{
+            //         content: "";
+            //         position: absolute;
+            //         top: 0;
+            //         z-index: 10;
+            //         left: 0;
+            //         width: 50px;
+            //         height: 50px;
+            //         background-color: $green;
+            //         color: $white;
+            //         border-radius: 100%;
+            //     }
+            // }
+
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            svg {
+                font-size: 1.5rem;
+                color: $white;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+}
+
+@media (min-width:1000px) {
+    .menuicon {
+        display: none;
+    }
+}
+
+@media (max-width:550px) {
+    nav .container .top .search-box {
+        width: 80%;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    nav .container .user svg {
+        font-size: .8rem;
+    }
+
+
+}
